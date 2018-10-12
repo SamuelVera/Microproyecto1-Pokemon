@@ -1,9 +1,9 @@
 <h3>Pokémon 001-251</h3>
 <div class="grid grid-pad">
-  <ul>
-    <li *ngFor="let pokemon of pokemons">
-      {{pokemon.pkdx_id}}
-      {{pokemon.name}}
-    </li>
-  </ul>
+  <a *ngFor="let pokemon of pokemons" class="col-1-4">
+    <div class="module pokemon">
+      <img src="{{pokemon.art_url}}" width=80>
+      <h4><a href="details/{{pokemon._id}}">{{pokemon.pkdx_id}}. {{pokemon.name}}</a></h4>
+    </div>
+  </a>
 </div>
