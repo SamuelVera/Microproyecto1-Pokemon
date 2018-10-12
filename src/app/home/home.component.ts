@@ -1,5 +1,11 @@
+import { Observable } from 'rxjs';
 import { PokemonService } from './../pokemon.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
+import { Pokemon } from '../pokemon';
+
+@Injectable({
+  providedIn: 'root'
+})
 
 @Component({
   selector: 'app-home',
@@ -18,9 +24,6 @@ export class HomeComponent implements OnInit {
 
   getPokemons(){
     this.pokemonService.getPokemons()
-    .subscribe(data => {this.pokemons = data;
-    console.log(this.pokemons)})
-    console.log(this.pokemons);
+    .subscribe(data => {this.pokemons = data;})
   }
-
 }
