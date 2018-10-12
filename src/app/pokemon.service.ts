@@ -23,7 +23,6 @@ export class PokemonService {
     
     this.getPokemons()
     .subscribe(data => {(this.pokemons = data)})
-
     return of(this.pokemons.find(pokemon => pokemon._id === id));
   }
 

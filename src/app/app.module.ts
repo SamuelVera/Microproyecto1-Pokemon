@@ -21,7 +21,6 @@ import { AppRoutingModule } from './app-routing.module';
     HttpClientModule,
     AppRoutingModule,
   ],
-  providers: [PokemonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

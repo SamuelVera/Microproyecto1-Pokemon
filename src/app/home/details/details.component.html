@@ -1,4 +1,10 @@
 <div *ngIf=pokemon>
-    {{pokemon._id}}
-    HOLA
+    {{pokemon.pkdx_id}}
+    {{pokemon.name}}
+    {{pokemon.description}}
+    {{pokemon.national_id}}
+    <br><br><br>
+    <img src="{{pokemon.art_url}}">
+    {{pokemon.types}}
+    {{pokemon.evolutions}}
 </div>

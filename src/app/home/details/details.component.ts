@@ -2,6 +2,7 @@ import { PokemonService } from './../../pokemon.service';
 import { Pokemon } from './../../pokemon';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { pipe } from '@angular/core/src/render3/pipe';
 
 @Component({
   selector: 'app-details',
@@ -15,13 +16,13 @@ export class DetailsComponent implements OnInit {
     private pokemonService: PokemonService,
   ) {}
 
-  public pokemon: Pokemon;
+  private pokemon: Pokemon;
 
   ngOnInit(){
     this.getPokemon();
   }
   
-  getPokemon(): void{
+  getPokemon(){
     const id = this.route.snapshot.paramMap.get('_id');
     console.log(id);
     this.pokemonService.getPokemon(id)
