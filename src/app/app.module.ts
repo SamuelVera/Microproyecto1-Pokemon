@@ -1,11 +1,14 @@
+import { PokemonService } from './pokemon.service';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { DetailsComponent } from './details/details.component';
+import { DetailsComponent } from './home/details/details.component';
 
 import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -15,9 +18,10 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
   ],
-  providers: [],
+  providers: [PokemonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
