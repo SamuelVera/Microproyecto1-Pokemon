@@ -1,9 +1,20 @@
-<h3>Pokémon 001-251</h3>
-<div class="grid grid-pad">
+
+
+
+<div class="container-fluid  container-d"><h3>Pokédex</h3></div>
+<br><br>
+<p>Aquí podras encontrar 251 pokemones distintos, ¿Qué esperas? ¡Atrapalos todos!</p>
+<div class="container-fluid  container-r">
+ <div class="row">
   <a *ngFor="let pokemon of pokemons" class="col-1-4">
+    
     <div class="module pokemon">
+    <div class="thumbnail">
       <img src="{{pokemon.art_url}}" width=80>
-      <h4><a routerLink="details/{{pokemon._id}}">{{pokemon.pkdx_id}}. {{pokemon.name}}</a></h4>
+      <h4><button type="button" class="btn btn-primary bt" routerLink="details/{{pokemon._id}}">{{pokemon.pkdx_id}}. {{pokemon.name}}</button></h4>
+    </div>
     </div>
   </a>
+  
+  </div>
 </div>
