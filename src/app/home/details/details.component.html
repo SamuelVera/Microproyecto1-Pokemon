@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-<div *ngIf=pokemon>
-    Internacional: {{pokemon.pkdx_id}}<br>
-    National: {{pokemon.national_id}}<br>
-    {{pokemon.name}}
-    {{pokemon.description}}
-    <br><br><br><br>
-    <img src="{{pokemon.art_url}}"><br>
-    Tipos: {{pokemon.types}}
-    {{pokemon.evolutions}}
-</div>
-=======
+
 <html>
         <head>
         <style>
@@ -32,7 +21,7 @@
         
         <h1>POKEDEX</h1>
         <img src="{{pokemon.art_url}}">
-        <div class="grid-container">
+        <div *ngIf=pokemon class="grid-container">
           <div class="item1">ID: {{pokemon.pkdx_id}}</div>
           <div class="item2">Name: {{pokemon.name}}</div>
           <div class="item3"> National ID: {{pokemon.national_id}}</div>  
@@ -43,4 +32,3 @@
         
         </body>
         </html>
->>>>>>> 9d4446b0cd603ee758bf85a22add466d262cd017
