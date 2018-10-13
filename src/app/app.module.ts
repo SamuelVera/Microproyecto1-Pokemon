@@ -1,4 +1,3 @@
-import { PokemonService } from './pokemon.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -8,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { DetailsComponent } from './home/details/details.component';
 
 import { AppRoutingModule } from './app-routing.module';
-
+import { ButtonsModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,6 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    ButtonsModule.forRoot()
   ],
   bootstrap: [AppComponent]
 })
